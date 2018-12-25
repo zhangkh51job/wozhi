@@ -1,0 +1,29 @@
+.signin{background: url("../../assets/signIn/bg.png") left bottom no-repeat;width: 100%;height: 100%;background-size: 100% auto;position: relative;padding: .4rem;}
+.signResultPage{background-image: none !important;}
+.signin header{background-color: #fdf4e9;text-align: center;padding: 30px;position: relative;margin-bottom: 68px;}
+.signin header h1{margin-bottom: 16px;}
+.signin .train-content{background: url("../../assets/signIn/title-line.png") left center no-repeat;background-size: 100% auto;padding: 0 20px;color: #fe7032;font-size: 36px;}
+.signin .train-time{color: #fe7032;}
+.signin .trangle{width: 0;height: 0;border-top: 20px solid #fdf4e9;border-left: 20px solid transparent;border-right: 20px solid transparent;position: absolute;left: calc(50% - 20px);top:100%;}
+.signin main{text-align: left;}
+.signin .signin-icon{display: inline-block;width: 100px;height: 40px;background: url("../../assets/signIn/signIn.png") left top no-repeat;background-size: auto 100%;vertical-align: middle;}
+.signin .signout-icon{background-image: url("../../assets/signIn/signOut.png")}
+.signin .title{margin-bottom: 92px;}
+.signin .title label{font-size: 32px;vertical-align: middle;}
+.signin main input[type="text"]{border: transparent;outline:none;border-bottom: 1px solid #f1f1f1;width: 100%;margin-bottom: 64px;padding-bottom: 8px;}
+.signin main input[type="button"]{width: 100%;background-color: #fe7235;color: #fff;border: transparent;outline: none;height: 80px;border-radius: 80px;margin-top: 24px;font-size: 32px;}
+.signin .block{text-align: center;}
+.signin main img{width: 5.5rem;margin-bottom: 24px;}
+
+.sign-info{color: #fe6928;font-size: 40px;margin-bottom: 8px;}
+.sign-tip{color: #999;}.sign-tip i{font-style: normal;color: #666;}
+
+.van-dialog{    border-radius: 12px;}
+.van-dialog__header{font-size: 20px;}
+.van-button__text{    font-size: 16px;
+    color: #FE7235 !important;
+    font-weight: bold;}
+.van-dialog__message{font-size: 16px;}
+.van-toast div{color: #fff;}
+
+.input-disable{pointer-events: none;user-select: none;-webkit-user-select: none; }

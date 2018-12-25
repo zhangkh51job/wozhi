@@ -1,0 +1,80 @@
+.tap-ul{height: 40px;line-height:40px;border-bottom: 1px solid #eee;/*no*/}
+.tap-ul li{display:inline-block;width: 49%;text-align: center;}
+.tap-ul .active{padding-bottom: 9px;border-bottom: 2px solid #34b1ff;/*no*/}
+
+.btn-ct{border-top: 1px solid #38adff;/*no*/height: 50px;position: fixed;bottom: 0px;width: 100%;}
+.btn-ct a{float: left;width: 50%;height:50px;line-height:50px;color: #38adff;background-color: #fff;}
+.btn-ct .active{color: #fff;background-color: #38adff;}
+
+.tuandai-ct{padding-bottom: 50px;}
+/* myScore */
+.header{height:46px;line-height:46px;text-align: left;border-bottom: 1px solid #e6e6e6;/*no*/position: relative;margin-bottom: 20px;}
+.year-select{display: inline-block;color: #64bdff;/*font-size: 16px;*/}
+.select-bar .select-icon{display: inline-block;width: 15px;height: 6px;background: url('../../assets/score/arrow-down.png') left top no-repeat;background-size: auto 100%;vertical-align: middle;margin-left: 10px;}
+.select-bar{height: 30px;line-height:30px;border-right: 1px solid #e6e6e6;/*no*/display: inline-block;padding: 0 12px;position: relative;z-index: 2;background-color: #fff;}
+.select-ct{position: absolute;height:46px;line-height:46px;left: 90px;top: 0;font-size: 16px;/*px*/width: 350px;z-index: 1;}
+.select-ct span{color: #999;width: 70px;display: inline-block;text-align: center;}
+.select-ct .active{color: #38adff;}
+
+.score-content{padding-top: 10px;}
+.score-detail{/*width: 60%;*/width:220px;height:200px;margin: auto;background: url('../../assets/score/person-score-circle-2.png') left top no-repeat;background-size: 100% auto;padding-top: 45px;color: #999;font-size: 18px;/*px*/margin-bottom: 20px;}
+.score-detail div{font-size: 16px;/*px*/margin-bottom: 8px;}
+.score-ct{margin-top: 16px;}
+.score-ct .score-num{font-size: 42px;/*px*/color: #38adff;}.score-ct .score-prefix{font-size: 22px;/*px*/color: #38adff;}
+
+.score-title{text-align: left;margin-left: 15px;margin-bottom:10px;color: #999;}.score-title .mark{display: inline-block;background-color: #38adff;width: 8px;height: 8px;border-radius: 50%;margin-right: 8px;vertical-align: middle;}
+.score-list{margin-left: 15px;text-align: left;}.score-list i{font-style: normal;}
+.score-list li{border-bottom: 1px solid #e6e6e6;/*no*/padding:15px 15px 15px 0; }
+.score-list li i{float: right;}
+.score-tip{padding: 15px;background-color: #f7f7f7;}
+.score-tip .score-tip-icon{width: 18px;height: 18px;display: inline-block;background: url('../../assets/score/person-score-icon-02.png');background-size: contain;vertical-align: middle;margin-right: 4px;}.score-tip span{vertical-align: middle;color: #999;}
+.search-ct{border: 1px solid #38adff;/*no*/margin: 0 12px 30px 12px;padding: 8px 0;border-radius: 4px;/*no*/text-align: left;}
+.search-ct input{border: transparent;padding-left: 8px;color: #666;}
+.search-ct .search-icon{width: 15px;height: 10px;background: url('../../assets/score/arrow-down.png') left top no-repeat;background-size: 100% auto;float: right;margin-right: 8px;position: relative;top:4px;}
+.orgScore-tip{position: absolute;bottom: 50px;background-color: #fff;width: 100%;}
+.search-no-data{text-align: center;padding-top: 80px;}.search-no-data img{width: 60%;}
+::-webkit-input-placeholder{color: #999;}
+.score-detail-url{float: right;color: #38adff;font-size: 18px;/*px*/margin-right: 15px;}
+
+/* score-page */
+.score-page{background-color: #fff;color: #999;font-size: 1rem !important;}
+.score-page .rank-ct{padding: 2.5rem 0 1.5rem;}
+.score-page .total-rank-ct{margin: 0 auto;width: 12rem;height: 8.6rem;background: url("../../assets/score/my_scorebg_high.png") center top no-repeat;background-size: auto 100%;}
+.score-page .total-rank-bg{text-align: center;padding-top: 1.8rem;}
+.score-page .total-rank-num{font-size: 1.6rem;color: #ff8806;}
+.score-page .total-rank-bg p{color: #999999;margin: .1rem 0;}
+.score-page .rank-ct li{width: 33.33%;float: left;background: url("../../assets/score/my_credit_line.png") right center no-repeat;text-align: center;background-size: auto 88%;}
+.score-page .rank-list-no-bg{background: 0% 0% !important;}
+
+.score-page .rank-list{background: url("../../assets/score/my_credit_card_circular_hole_left.png") left bottom no-repeat;padding: 1.5rem;height: 11rem;background-size: 100% auto;/*padding-top: 2rem;*/}
+.score-page .num{color: #333;font-size: 1rem;font-weight: bold;}
+.score-page .rank-list p{color: #999;margin: .8rem 0;}
+.score-page .group-score-list{height: 6rem; }
+.score-page .group-score-list p{margin:0;margin-top: .15rem;}
+.score-page .group-score-list li{width: 50%;float: left;background: url("../../assets/score/my_credit_line.png") right center no-repeat;text-align: center;background-size: auto 88%;}
+.score-page .group-score-list li>div{margin-left: 2rem;text-align: left;}
+.score-page i{font-style: normal;}
+.score-page .total-score{color: #ffa800;font-size: 1.4rem;}
+.score-page .month-score{color: #00ba16;font-size: 1.4rem;}
+.score-page .total-score-mark{background-color: #ffb400;}
+.score-page .mark{width: 1.2rem;height: .3rem;border-radius: .3rem;margin-top: .3rem;}
+.score-page .month-score-mark{background-color: #00ba16;}
+.score-page .score-item span{/*width: 7rem;*/width:50%;text-align: left;float: left;/*margin-left: 2rem;*/box-sizing:border-box;padding-left:2rem;font-size: .8rem;}
+/*.score-page .score-item>span:nth-child(2){margin-left: 3rem;}*/
+.score-page .score-item i{font-style: normal;color: #333;font-weight: bold;font-size: 1rem;}.score-page .score-item label{font-size: 1rem;}
+.score-page .score-item{height: 2.5rem;}
+.score-page .score-detail-ct{padding-bottom: 2rem;}
+
+.search-list{padding-left: 12px;text-align: left;padding-bottom: 60px;}
+.search-list .search-item >*{display: inline-block;vertical-align: middle;}
+.search-list .search-item{padding: 15px 12px 15px 0;border-bottom: 1px solid #e6e6e6;/*no*/}
+.search-list .item-create{width: 45px;height: 45px;border-radius: 50%;background-color: #38adff;line-height: 50px;text-align: center;color: #fff;margin-right: 10px;}
+.search-list .item-name, .search-list .item-job{display: block;}
+.search-list .item-name{color: #333;}
+.search-list .item-job{color: #999;}
+.search-list .item-score{color: #38adff;float: right;position: relative;top:15px;}
+
+.header .van-overlay{top:90px !important;}
+.header .year-ul{background-color: #fff;width: 86px;text-align: center;}
+.header .year-ul li{height: 40px;line-height: 40px;color: #a9a9a9;font-size: 16px;/*px*/}
+.header .van-popup{top:90px;background-color: transparent;}

@@ -1,0 +1,10 @@
+{"userId":null,"userName":null,"position":null,"total":0,"avatar":null,
+  "scoreItem":[
+    {"studyType":"1","studyTypeName":"培训必修课","score":0},
+    {"studyType":"2","studyTypeName":"培训选修课","score":0},
+    {"studyType":"3","studyTypeName":"自主学习","score":0},
+    {"studyType":"4","studyTypeName":"技能竞赛","score":0},
+    {"studyType":"5","studyTypeName":"学习分享","score":0},
+    {"studyType":"6","studyTypeName":"知识库建设","score":0},
+    {"studyType":"0","studyTypeName":"其他","score":0}
+  ]}

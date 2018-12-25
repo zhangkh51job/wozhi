@@ -1,0 +1,38 @@
+@charset "utf-8";
+*{border: transparent;outline: none;padding: 0;margin: 0;font-size: 14px;color: #333333;box-sizing: border-box;}
+html,body{min-width: 1000px;min-height:680px;width: 100%;height:100%;background-color: #f2f2f2;overflow-y: auto;overflow-x:hidden;font-size: 14px;font-family: 'Microsoft Yahei','\5FAE\8F6F\96C5\9ED1',Arial,'Hiragino Sans GB','\5B8B\4F53'}
+ul, li{list-style: none;}
+header,main,footer{display: block;}
+footer{background-color: #fff;text-align: center;height: 80px;padding-top: 15px;/*position: absolute;bottom: 0px;width: 100%;*/}
+footer *{font-style: normal;color: #999;}
+header{width: 100%;background-color: #fff;height: 76px;}footer address{line-height: 1.8;color: #999;}
+header .title-ct{width: 1000px;margin: auto;height: 76px;line-height: 76px;padding-top: 11px;}
+main{background: url("../image/bg.png") center top no-repeat;height: calc(100% - 156px);position: relative;}
+.logo-ct{width: 400px;height: 450px;background-color: #fff;position: absolute;left: calc(50% - 200px);top: calc(50% - 225px);padding: 46px 40px 0 40px;text-align: center;border-radius: 10px;}
+.logo-ct .tap-item{color: #333;font-size: 20px;cursor: pointer;display: inline-block;}
+.logo-ct .tap{margin-bottom: 36px;}
+.logo-ct .active{color: #38adff;}.logo-ct .cut-off-line{height: 18px;display: inline-block;border-left: 1px solid #e6e6e6;margin: 0 60px;}
+.logo-ct .item{border: 1px solid #e6e6e6;height: 42px;line-height: 42px;margin-bottom: 25px;text-align: left;}
+.logo-ct .item-memory{text-align: left;margin-bottom: 25px;}.logo-ct .item-memory input[type="checkbox"]{vertical-align: middle;margin-right: 4px;}.logo-ct .item-memory a{float: right;}.logo-ct .item-memory>*{color: #a6a6a6;}
+.logo-ct .login-btn{height: 48px;width: 320px;border-radius: 48px;color: #fff;background-color: #38adff;font-size: 16px;}
+.logo-ct .item i{display: inline-block;width: 20px;height: 20px;margin: 0 14px;}.logo-ct .item>*{vertical-align: middle;}
+.logo-ct .item .user-icon{background-image: url("../image/user-icon.png")}
+.logo-ct .item .lock-icon{background-image: url("../image/lock-icon.png")}
+.logo-ct .item .email-icon{background-image: url("../image/email-icon.png")}
+.logo-ct .freshen-ct{margin-top: 15px;}.logo-ct .freshen-ct i{font-style: normal;color: #a5a59e;vertical-align: middle;}
+.logo-ct .reflash-icon{display: inline-block;width: 54px;height: 27px;background-image: url("../image/reflesh-icon.png");margin-left: 8px;cursor: pointer;}
+input[type="text"]::-webkit-input-placeholder{
+  color:#d2d2d2;
+}
+input[type="text"]::-moz-placeholder{   /* Mozilla Firefox 19+ */
+  color:#d2d2d2;
+}
+input[type="text"]:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+  color:#d2d2d2;
+}
+input[type="text"]:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+  color:#d2d2d2;
+}
+
+
+

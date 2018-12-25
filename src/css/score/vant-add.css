@@ -1,0 +1,16 @@
+#app .van-picker__toolbar{
+  height: 1.173334rem !important;
+  line-height: 1.173334rem !important;}
+[data-dpr="1"] * {
+  font-size: 14px;
+}
+[data-dpr="2"] * {
+  font-size: 28px;
+}
+[data-dpr="3"] * {
+  font-size: 42px;
+}
+#app .van-toast--text{padding: 0.213334rem 0.32rem;
+  min-width: 2.56rem;line-height: 1.2;}
+/*.van-picker-column__item{padding: 0 0.133334rem;height: 1.17333rem !important;line-height: 1.17333rem !important;}
+.van-picker__columns, .van-picker-column{height: 5.8666rem !important;}*/
