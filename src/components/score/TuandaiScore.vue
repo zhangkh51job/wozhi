@@ -28,7 +28,7 @@
           </span>
       </div>
     </div>
-    <div class="tuandai-ct">
+    <div :class="{'tuandai-ct': hasOrganization}">
       <MyScore v-show="currPanel == 'myScore'"
                :year="currYear"
                :quater="currQuater"

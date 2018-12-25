@@ -1,10 +1,10 @@
 <template>
-    <div class="score-index-ct">
+    <div class="score-index-ct" :style="{visibility: isLoaded?'visible':'hidden'}">
         <header>
             <img src="../assets/score/header-bg.png">
         </header>
         <div class="index-item-ct">
-            <a class="index-item index-score-check" href="#/scoreCheck">
+            <a class="index-item index-score-check" href="#/scoreCheck" @click="checkScore">
                 <img src="../assets/score/index-icon1.png">
                 <div>
                     <span>学分查询</span>
@@ -31,6 +31,58 @@
         </footer>
     </div>
 </template>
+<script>
+    import {isTuanDaiMember} from '../api/score';
+    import {StudyPointInterfaceUrl} from '../api/config';
+    export default{
+        name: 'ScoreIndex',
+        data(){
+            return {
+                isShowTuanDai: false,
+                isLoaded: false
+            }
+        },
+        mounted(){
+            let reqData = {
+                "Ip": "",
+                "SystemName": "",
+                "Version": "1.0.0",
+                Token: sessionStorage.getItem('Token') ? sessionStorage.getItem('Token') : "ddddddd",//liuhao
+                UserId: sessionStorage.getItem('UserId') ? sessionStorage.getItem('UserId') : "6A67A284578BD33E",
+                "MethodName": "",
+                "Data": '',
+                baseURL: StudyPointInterfaceUrl
+            };
+            isTuanDaiMember(reqData).then((info) => {
+                this.isShowTuanDai = !info.data.Data.IsHaveDefualtScore;/* true表示是集团的， false表示是团贷网的 */
+//                this.currShowPanel = this.isShowTuanDai == false?'group':'tudandai';
+                sessionStorage.setItem('scoreIndex-isShowTuanDai', this.isShowTuanDai)
+            if(this.isShowTuanDai==false){
+                this.$router.push({
+                    path: "/scoreCheck",
+                    query: {
+                        isShowTuanDai: this.isShowTuanDai
+                    }
+                })
+            }else{
+                this.isLoaded = true;
+            }
+            })
+
+        },
+        methods:{
+            checkScore(){
+                let _this = this;
+                this.$router.replace({
+                    path: "/scoreCheck",
+                    query: {
+                        isShowTuanDai: _this.isShowTuanDai
+                    }
+                })
+            }
+        }
+    }
+</script>
 <style>
     .score-index-ct header{height: 2.26667rem;text-align: center;margin-bottom: .72rem;}
     .score-index-ct header img, .score-index-ct footer img{width: auto;height: 100%;z-index: 1}
@@ -108,7 +160,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        z-index: 0;
+        z-index: -1;
         bottom: 0;
         height: 3.14667rem;
     }

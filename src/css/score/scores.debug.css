@@ -2,7 +2,7 @@
   height: 1.226666rem;
   line-height: 1.226666rem;
   border-bottom: 1px solid #eee;
-  visibility: hidden;
+  display: none;
 }
 
 .tap-ul li {
@@ -261,6 +261,7 @@
   border: transparent;
   padding-left: 0.213334rem;
   color: #666;
+  pointer-events: none;
 }
 
 .search-ct .search-icon {

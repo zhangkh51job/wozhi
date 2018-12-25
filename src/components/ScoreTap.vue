@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul class="tap-ul" :style="{visibility:isShowTuanDai?'visible':'hidden'}">
+    <ul class="tap-ul" :style="{display:isShowTuanDai?'block':'none'}">
       <li>
         <span
                 @click="switchPanel('团贷网')"
@@ -47,7 +47,7 @@
       GroupScore
     },
     mounted(){
-      let reqData = {
+      /*let reqData = {
         "Ip": "",
         "SystemName": "",
         "Version": "1.0.0",
@@ -58,9 +58,12 @@
         baseURL: StudyPointInterfaceUrl
       };
       isTuanDaiMember(reqData).then((info) => {
-        this.isShowTuanDai = !info.data.Data.IsHaveDefualtScore;/* true表示是集团的， false表示是团贷网的 */
+        this.isShowTuanDai = !info.data.Data.IsHaveDefualtScore;/!* true表示是集团的， false表示是团贷网的 *!/
       this.currShowPanel = this.isShowTuanDai == false?'group':'tudandai';
-      })
+      })*/
+      this.isShowTuanDai = (sessionStorage.getItem('scoreIndex-isShowTuanDai'))== 'true'?true:false;
+//      this.isShowTuanDai = this.$route.query.isShowTuanDai;
+      this.currShowPanel = this.isShowTuanDai == false?'group':'tudandai';
     },
     methods:{
       switchPanel(text){
