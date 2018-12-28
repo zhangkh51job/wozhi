@@ -33,6 +33,8 @@
                :year="currYear"
                :quater="currQuater"
                :pageData ="myScoreData"
+               :departmentId ="currSelectOrgDepartmentId"
+               :userId = "currUserId"
       >
       </MyScore>
       <OrgScore v-show="currPanel == 'orgScore'"
@@ -45,8 +47,16 @@
       </OrgScore>
     </div>
     <div :class="{'btn-ct':true, orgScore: !hasOrganization}">
-      <a @click="switchPanel('我的学分')" :class="{active: currPanel == 'myScore' }">我的学分</a>
-      <a @click="switchPanel('组织学分')" :class="{active: currPanel == 'orgScore' }">组织学分</a>
+      <a
+              @click="switchPanel('我的学分')"
+              :class="{active: currPanel == 'myScore' }">
+        我的学分
+      </a>
+      <a
+              @click="switchPanel('组织学分')"
+              :class="{active: currPanel == 'orgScore' }">
+        组织学分
+      </a>
     </div>
   </div>
 </template>

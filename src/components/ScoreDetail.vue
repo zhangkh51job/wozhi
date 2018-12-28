@@ -120,8 +120,8 @@
       let begDate = this.$route.query.begDate,
         /* 默认查询开始日期在十年前到当前日期 */
       endDate = this.$route.query.endDate;
-      let deptId = thisPageUserId = this.$route.query.deptId || 0;
-      let userId = thisPageDeptId = this.$route.query.userId || 0;
+      let userId = thisPageUserId = this.$route.query.userId || 0;
+      let deptId = thisPageDeptId = this.$route.query.deptId || 0;
 
       this.runFilter({
         deptId,
@@ -198,9 +198,11 @@
         this.filterPanelShow = false;
       },
       filterCourse(){
-
         let _this = this;
-
+        if(_this.endDateText == '' || _this.startDateText == ''){
+          Toast('开始日期或结束日期不能为空，请选择！');
+          return;
+        }
         if(_this.endDateText < _this.startDateText){
           Toast('结束日期少于开始日期,请重新选择结束日期！');
           return;

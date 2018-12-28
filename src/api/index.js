@@ -7,8 +7,12 @@ const axios = require('axios').create({
   baseURL: InterfaceUrl,            //api请求的baseURL
   timeout: 0,
   //withCredentials: true, // 允许跨域 cookie
-  headers: {'X-Requested-With': 'XMLHttpRequest'},
-  contentType: "application/json",
+  headers: {
+    'X-Requested-With': 'XMLHttpRequest',
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'Access-Control-Allow-Origin': '*', Accept: 'application/json'
+  },
+  contentType: "application/x-www-form-urlencoded",
   maxContentLength: 2000,
   transformResponse: [function (data) {
     try {
@@ -56,9 +60,11 @@ export const _postNoWithCredentials = (req) => {
   urlAdjust(req);
   return axios({method: 'post', url: `/${req.url}`, data: req.data, withCredentials:false})
 }
-
+import Qs from 'qs'
 // post
 export const _postWithBaseUrl = (req) => {
   urlAdjust(req);
-  return axios({method: 'post', url: `/${req.url}`, data: req.data, baseURL: req.data.baseURL})
+  let baseUrl = req.data.baseURL;
+  req.data = Qs.stringify(req.data);
+  return axios({method: 'post', url: `/${req.url}`, data: req.data, baseURL: baseUrl})
 }

@@ -32,8 +32,8 @@
     </div>
 </template>
 <script>
-    import {isTuanDaiMember} from '../api/score';
-    import {StudyPointInterfaceUrl} from '../api/config';
+    import {isTuanDaiMember} from '../api/net-api.js';
+    //    import {StudyPointInterfaceUrl} from '../api/config';
     export default{
         name: 'ScoreIndex',
         data(){
@@ -50,30 +50,34 @@
                 Token: sessionStorage.getItem('Token') ? sessionStorage.getItem('Token') : "ddddddd",//liuhao
                 UserId: sessionStorage.getItem('UserId') ? sessionStorage.getItem('UserId') : "6A67A284578BD33E",
                 "MethodName": "",
-                "Data": '',
-                baseURL: StudyPointInterfaceUrl
+                "Data": ''/*,
+                 baseURL: StudyPointInterfaceUrl*/
             };
-            isTuanDaiMember(reqData).then((info) => {
-                this.isShowTuanDai = !info.data.Data.IsHaveDefualtScore;/* true表示是集团的， false表示是团贷网的 */
-//                this.currShowPanel = this.isShowTuanDai == false?'group':'tudandai';
-                sessionStorage.setItem('scoreIndex-isShowTuanDai', this.isShowTuanDai)
-            if(this.isShowTuanDai==false){
-                this.$router.push({
-                    path: "/scoreCheck",
-                    query: {
-                        isShowTuanDai: this.isShowTuanDai
-                    }
-                })
-            }else{
-                this.isLoaded = true;
-            }
-            })
+            let _this = this;
+            /*isTuanDaiMember(reqData/!*).then(*!/, function(info){
+                _this.isShowTuanDai = !info.Data.IsHaveDefualtScore;/!* true表示是集团的， false表示是团贷网的 *!/*/
+                _this.currShowPanel = _this.isShowTuanDai == false?'group':'tudandai';
+                /* 暂时不显示 */
+                _this.isShowTuanDai = false;
+                sessionStorage.setItem('scoreIndex-isShowTuanDai', _this.isShowTuanDai)
+                if(_this.isShowTuanDai==false){
+                    _this.$router.replace({
+                        path: "/scoreCheck",
+                        query: {
+                            isShowTuanDai: _this.isShowTuanDai
+                        }
+                    })
+                }else{
+                    _this.isLoaded = true;
+                    document.title = '学分系统';
+                }
+           /* })*/
 
         },
         methods:{
             checkScore(){
                 let _this = this;
-                this.$router.replace({
+                _this.$router.push({
                     path: "/scoreCheck",
                     query: {
                         isShowTuanDai: _this.isShowTuanDai

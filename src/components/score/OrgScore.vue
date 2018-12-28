@@ -16,7 +16,11 @@
       </div>
     </div>-->
     <div class="search-ct" @click="popColumn">
-      <input type="text" class="search" placeholder="请选择中心组织架构" :value="searchVal"><i class="search-icon"></i>
+      <input type="text"
+             class="search"
+             placeholder="请选择中心组织架构"
+             :value="searchVal">
+      <i class="search-icon"></i>
     </div>
     <ul class="search-list" v-if="orgList && orgList.length">
       <li v-for="n in orgList" class="search-item" @click="checkItemScore(n)">
@@ -122,7 +126,7 @@
         let _this = this, dept;
         this.departments.forEach(function(item){
           if(_this.searchVal == item.name){
-            dept = item.deptId;
+            dept = item.id;
             return false;
           }
         });

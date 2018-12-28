@@ -49,7 +49,7 @@
     import '../css/score/study-point.css';
     import {Dialog} from 'vant';
     import 'vant/lib/dialog/style';
-    import {getStudyPointDetail} from '../api/score';
+    import {getStudyPointDetail} from '../api/net-api';
     import {eventBus} from '../utils/SibContaxt';
     import {showShareBtn} from '../utils/appContaxt';
     import {androidDownLoadUrl, iosDownLoadUrl, StudyPointInterfaceUrl} from '../api/config';
@@ -96,8 +96,8 @@
                 "Data": sessionStorage.getItem('SubjectId') ? sessionStorage.getItem('SubjectId') : "63baf3fc-ab22-4551-9aa9-3d81cd5d3d50",
                 baseURL: StudyPointInterfaceUrl
             };
-            getStudyPointDetail(reqData).then((info) => {
-                this.pageData = info.data.Data;
+            getStudyPointDetail(reqData/*).then(*/, (info) => {
+                this.pageData = info.Data;
                 this.flexiblePage()
             })
             this.notInWoZhiColleage = !navigator.userAgent.match(/wozhiColleage/gi);
@@ -109,7 +109,7 @@
                 if (navigator.userAgent.match(/wozhiColleage/gi)){
                  showShareBtn();
                  }else if (navigator.userAgent.match(/MicroMessenger/ig)){
-                 this.isInWeiXin = true;
+//                 this.isInWeiXin = true;
                  }else {
                     let _this = this;
                     Dialog.confirm({

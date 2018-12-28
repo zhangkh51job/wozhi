@@ -26,7 +26,10 @@
           {{quater==0?year+'年':quater==1?'1月-3月':quater==2?'4月-6月':quater==3?'7月-9月':quater==4?'10月-12月':'10月-12月'}} 获得学分
         </div>
         <div class="score-ct">
-          <span class="score-num">{{pageData.total}}</span><span class="score-prefix">分</span>
+          <span class="score-num">
+            {{pageData.total}}
+          </span>
+          <span class="score-prefix">分</span>
         </div>
       </div>
       <div class="score-title">
@@ -62,6 +65,14 @@
       pageData:{
         type: Object
       },
+      departmentId:{
+        type: String,
+        default: 0
+      },
+      userId:{
+        type: String,
+        default: 0
+      },
       year:{
         type: String,
         default: '2018'
@@ -95,11 +106,13 @@
       checkScoreDetail(n){
         let {begDate, endDate} = transformTime(this.year, this.quater)
 
+        let _this = this;
+        let userId;
         this.$router.push({
           path: "/scoreDetail",
           query: {
-            deptId: this.$route.query.deptId || 0,
-            userId: this.$route.query.userId || 0,
+            deptId: _this.departmentId || 0,
+            userId: _this.userId || 0,
             begDate,
             endDate,
             studyType: (n&&n.studyType)?n.studyType:''

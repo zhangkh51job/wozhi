@@ -39,7 +39,7 @@ const router =  new Router({
       path: '/scoreIndex',
       name: 'ScoreIndex',
       component: () => import('../components/ScoreIndex'),
-      meta:{title: '学分系统'}
+      //meta:{title: '学分系统'}
     },
     {
       path: '/scoreTip',
