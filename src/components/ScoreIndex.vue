@@ -56,11 +56,12 @@
             let _this = this;
             /*isTuanDaiMember(reqData/!*).then(*!/, function(info){
                 _this.isShowTuanDai = !info.Data.IsHaveDefualtScore;/!* true表示是集团的， false表示是团贷网的 *!/*/
-                _this.currShowPanel = _this.isShowTuanDai == false?'group':'tudandai';
                 /* 暂时不显示 */
                 _this.isShowTuanDai = false;
+
+                _this.currShowPanel = _this.isShowTuanDai == false?'group':'tudandai';
                 sessionStorage.setItem('scoreIndex-isShowTuanDai', _this.isShowTuanDai)
-                if(_this.isShowTuanDai==false){
+                if(_this.isShowTuanDai == false){
                     _this.$router.replace({
                         path: "/scoreCheck",
                         query: {
@@ -71,7 +72,7 @@
                     _this.isLoaded = true;
                     document.title = '学分系统';
                 }
-           /* })*/
+            /*})*/
 
         },
         methods:{

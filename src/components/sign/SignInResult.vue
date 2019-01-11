@@ -5,7 +5,7 @@
       <div class="train-time">(签到时间段：{{'2018-11-10 09:00 - 10:00'}})</div>
       <div class="trangle"></div>
     </header>-->
-    <main style="padding-top: 40px;">
+    <main style="padding-top: 20px;">
       <div class="block" v-if="data.result=='success'">
         <img src="../../assets/signIn/signIn-success.png" >
         <div class="sign-info">

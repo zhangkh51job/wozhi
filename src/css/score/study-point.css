@@ -5,7 +5,7 @@
 .study-point-page .publisher{color: #7c8aa2;font-size: 32px;}
 .study-point-page .time{color: #a1a1a1;margin-left: .3rem;font-size: 32px;}
 .study-point-page .audio-ct{margin: .5rem 15px;padding: .5rem;}
-.study-point-page .content{padding-top: .8rem;padding-bottom:1.6rem;text-align: left;}
+.study-point-page .content{/*padding-top: .8rem;padding-bottom:1.6rem;*/padding:.8rem .24rem 1.6rem .24rem;text-align: left;}
 .study-point-page img{max-width: 100% !important;height: auto !important;}
 
 .study-point-page .audio-ct{border: 1px solid #e6e6e6;padding: 18px;}

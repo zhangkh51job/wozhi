@@ -13,7 +13,7 @@
 .signin main input[type="text"]{border: transparent;outline:none;border-bottom: 1px solid #f1f1f1;width: 100%;margin-bottom: 64px;padding-bottom: 8px;}
 .signin main input[type="button"]{width: 100%;background-color: #fe7235;color: #fff;border: transparent;outline: none;height: 80px;border-radius: 80px;margin-top: 24px;font-size: 32px;}
 .signin .block{text-align: center;}
-.signin main img{width: 5.5rem;margin-bottom: 24px;}
+.signin main img{width: 5.2rem;margin-bottom: 24px;}
 
 .sign-info{color: #fe6928;font-size: 40px;margin-bottom: 8px;}
 .sign-tip{color: #999;}.sign-tip i{font-style: normal;color: #666;}

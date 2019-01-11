@@ -66,11 +66,11 @@
         type: Object
       },
       departmentId:{
-        type: String,
+        type: Number,
         default: 0
       },
       userId:{
-        type: String,
+        type: Number,
         default: 0
       },
       year:{

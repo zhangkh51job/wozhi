@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 //import './utils/flexible';
 
+
 //import "./css/sign/sign.css"
 import './utils/flexible';
 import Vue from 'vue'
@@ -20,14 +21,37 @@ import 'mint-ui/lib/style.css'
 Vue.use(MintUI)*/
 
 /* 模拟app拼接过来数据 */
-sessionStorage.setItem('deptId', "0");
+//sessionStorage.setItem('deptId', "0");
 //sessionStorage.setItem('userId', "F2A0A07BE94A452183909B1CDA6AA942");
 
-/* eslint-disable no-new */
-new Vue({
-    el: '#app',
-    router,
-    components: { App },
-    template: '<App/>'
-  })
+const startRun = function(){
+    /* eslint-disable no-new */
+    new Vue({
+        el: '#app',
+        router,
+        components: { App },
+        template: '<App/>'
+    })
+};
+const appendScript = function(src){
+    let scriptDom = document.createElement('script');
+    /*scriptDom.addEventListener('load', function(){
+        startRun();
+    });*/
+    scriptDom.onreadystatechange= function () {
+        if (this.readyState == 'complete')
+            startRun();
+        scriptDom.onreadystatechange = scriptDom.onload =null;
+    }
+    scriptDom.onload= function(){
+        startRun();
+        scriptDom.onreadystatechange = scriptDom.onload =null;
+    }
+    scriptDom.type = 'text/javascript';
+    scriptDom.src = src;
+
+    document.querySelector('head').appendChild(scriptDom);
+};
+appendScript("//g.alicdn.com/sj/lib/zepto/zepto.min.js");
+
 

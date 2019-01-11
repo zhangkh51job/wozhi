@@ -86,6 +86,7 @@
             eventBus.$on('drag2End', function(){
                 _this.gotoPlayPosition();
             });
+                document.addEventListener('visibilitychange', this.pageHangUp, false);
             let reqData = {
                 "Ip": "",
                 "SystemName": "",
@@ -103,11 +104,23 @@
             this.notInWoZhiColleage = !navigator.userAgent.match(/wozhiColleage/gi);
         },
         methods:{
+            pageHangUp(){
+                let audioDom = document.querySelector('#audioId');
+                if(!audioDom) return;
+
+                this.audioPause = document.hidden || document.webkitHidden || document.mozHidden || document.msHidden;
+
+                if(this.audioPause){
+                    audioDom.pause();
+                }else{
+                    audioDom.play();
+                }
+            },
             checkVariable(){
-//                showShareBtn();
+                showShareBtn();
                 let _this = this;
                 if (navigator.userAgent.match(/wozhiColleage/gi)){
-                 showShareBtn();
+//                 showShareBtn();
                  }else if (navigator.userAgent.match(/MicroMessenger/ig)){
 //                 this.isInWeiXin = true;
                  }else {
@@ -138,7 +151,7 @@
                         /* }*/
                     },200);
                     //自己定义的scheme协议
-                    window.location="wzc://xy.ipaison.cn/colleage-mobile/web/dist/index.html#/studyPoint?SubjectId="+(sessionStorage.getItem('SubjectId') ? sessionStorage.getItem('SubjectId') : "63baf3fc-ab22-4551-9aa9-3d81cd5d3d50");
+                    window.location="wzc://xy.ipaison.cn/colleage-mobile/web/dist/index.html#/studyPoint?SubjectId="+(sessionStorage.getItem('SubjectId') ? sessionStorage.getItem('SubjectId') : "63baf3fc-ab22-4551-9aa9-3d81cd5d3d50")+'&UserId='+(sessionStorage.getItem('UserId') ? sessionStorage.getItem('UserId') : "6A67A284578BD33E");
                 }
             },
             flexiblePage(){

@@ -82,8 +82,8 @@
 
         yearColumns:['2017', '2018'],
 
-        currSelectOrgDepartmentId: 0,
-        currUserId: 0,
+        currSelectOrgDepartmentId: '0',
+        currUserId: '0',
 
         myScoreData: null,
         orgList:[/*{"userId":"daikaimin","userName":"戴凯敏","position":"高级内控经理","total":0,"avatar":"","scoreItem":[]},
