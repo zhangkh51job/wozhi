@@ -29,7 +29,7 @@
 .score-tip{padding: 15px;background-color: #f7f7f7;}
 .score-tip .score-tip-icon{width: 18px;height: 18px;display: inline-block;background: url('../../assets/score/person-score-icon-02.png');background-size: contain;vertical-align: middle;margin-right: 4px;}.score-tip span{vertical-align: middle;color: #999;}
 .search-ct{border: 1px solid #38adff;/*no*/margin: 0 12px 30px 12px;padding: 8px 0;border-radius: 4px;/*no*/text-align: left;}
-.search-ct input{border: transparent;padding-left: 8px;color: #666;}
+.search-ct input{border: transparent;margin-left: 8px;color: #666;}
 .search-ct .search-icon{width: 15px;height: 10px;background: url('../../assets/score/arrow-down.png') left top no-repeat;background-size: 100% auto;float: right;margin-right: 8px;position: relative;top:4px;}
 .orgScore-tip{position: absolute;bottom: 50px;background-color: #fff;width: 100%;}
 .search-no-data{text-align: center;padding-top: 80px;}.search-no-data img{width: 60%;}

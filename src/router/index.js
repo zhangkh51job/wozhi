@@ -23,34 +23,77 @@ const router =  new Router({
         }
       ]
     },
-    {
+    /*{
       path: '/scoreCheck',
       name: 'ScoreCheck',
       component: () => import('../components/ScoreTap'),
-        meta:{title: '学分查询'}
-    },
+        meta:{title: '学分系统'}
+    },*/
     {
       path: '/scoreDetail',
       name: 'ScoreDetail',
-      component: () => import('../components/ScoreDetail'),
+      //component: () => import('../components/ScoreDetail'),
+        component: resolve => require(['@/components/ScoreDetail'], resolve),
       meta:{title: '学分明细'}
     },
+{
+    path: '/scoreIndex',
+    name: 'ScoreIndex',
+    //component: () => import('../components/ScoreIndex'),
+    component: resolve => require(['@/components/ScoreIndex'], resolve),
+    children: [
+  {
+    path: 'scoreWrap',
+    name: 'scoreWrap',
+    //component: () => import('../components/ScoreWrap'),
+    component: resolve => require(['@/components/ScoreWrap'], resolve),
+  children: [
     {
-      path: '/scoreIndex',
-      name: 'ScoreIndex',
-      component: () => import('../components/ScoreIndex'),
-      //meta:{title: '学分系统'}
+      path: '',
+      name: 'ScoreGuide',
+      //component: () => import('../components/score/ScoreGuide'),
+      component: resolve => require(['@/components/score/ScoreGuide'], resolve),
+  meta:{title: '我的学分'}
     },
+    {
+      path: 'tuandaiScoreCheck',
+      name: 'tuandaiScoreCheck',
+      //component: () => import('../components/score/TuandaiScore'),
+      component: resolve => require(['@/components/score/TuandaiScore'], resolve),
+  meta:{title: '学分查询'}
+},
+  {
+    path: 'scoreGuide',
+        name: 'ScoreGuide',
+      //component: () => import('../components/score/ScoreGuide'),
+    component: resolve => require(['@/components/score/ScoreGuide'], resolve),
+      meta:{title: '学分系统'}
+  },
+      ]
+},
+
+      {
+          path: 'tuandaiScoreCheck',
+          name: 'tuandaiScoreCheck',
+          //component: () => import('../components/score/TuandaiScore'),
+  component: resolve => require(['@/components/score/TuandaiScore'], resolve),
+          meta:{title: '签到查询'}
+      }
+    ]
+  //meta:{title: '学分系统'}
+  },
     {
       path: '/scoreTip',
       name: 'ScoreTip',
-      component: () => import('../components/ScoreTip'),
+      //component: () => import('../components/ScoreTip'),
+        component: resolve => require(['@/components/ScoreTip'], resolve),
       meta:{title: '学分向导'}
     },
     {
       path: '/studyPoint',
       name: 'StudyPoint',
-      component: () => import('../components/StudyPoint'),
+      //component: () => import('../components/StudyPoint'),
+        component: resolve => require(['@/components/StudyPoint'], resolve),
       meta:{title: '学点详情'}
     }
   ]

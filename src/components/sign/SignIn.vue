@@ -182,8 +182,6 @@
           },
           error:function (xhr, textStatus, errorThrown) {
           }});
-
-
       }
     }
   }

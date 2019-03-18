@@ -10,6 +10,7 @@ import App from './App'
 import router from './router'
 import './utils/sessions';
 import './directives/Drag';
+import './test';
 
 Vue.config.productionTip = false;
 

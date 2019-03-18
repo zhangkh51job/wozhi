@@ -45,7 +45,7 @@ export const validateUser = (data) => {
   return _get(req);
 };
 
-/*export const getGroupScore = (data) => {
+export const getGroupScore = (data) => {
   let req = {
     url: `api/Course/GetMyScore/${addCondition_userid}`
     //url: `/ding/score/detail/${data.deptId}/${data.userId}`
@@ -71,5 +71,5 @@ export const isTuanDaiMember = (data,fn) => {
   req.data = data;
   return _postWithBaseUrl(req);
   //_post(req, fn)
-}*/
+}
 

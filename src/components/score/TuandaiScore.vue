@@ -80,10 +80,10 @@
         tabss: ['全年', '一季度', '二季度', '三季度', '四季度'],
         currSelectTab: '全年',
 
-        yearColumns:['2017', '2018'],
+        yearColumns:['2018', '2019'],
 
-        currSelectOrgDepartmentId: '0',
-        currUserId: '0',
+        currSelectOrgDepartmentId: 0,
+        currUserId: 0,
 
         myScoreData: null,
         orgList:[/*{"userId":"daikaimin","userName":"戴凯敏","position":"高级内控经理","total":0,"avatar":"","scoreItem":[]},
@@ -93,7 +93,7 @@
         yearSelectPopShow: false,
 
         currPanel: 'myScore',
-        currYear: '2018',
+        currYear: '2019',
         currQuater:0,
         hasOrganization: false
       }
@@ -191,13 +191,13 @@
         }
       },
       departmentSelect(id){
-        this.currSelectOrgDepartmentId = id;
+        this.currSelectOrgDepartmentId = Number(id);
         this.getOrgListScores();
       },
       enterSelfScore(obj){
         /* */
-        this.currSelectOrgDepartmentId = obj.deptId;
-        this.currUserId = obj.userId;
+        this.currSelectOrgDepartmentId = Number(obj.deptId);
+        this.currUserId = /*Number*/(obj.userId);
         this.currPanel = 'myScore';
         this.getScoreProxy();
       }

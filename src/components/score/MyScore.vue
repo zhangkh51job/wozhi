@@ -111,8 +111,8 @@
         this.$router.push({
           path: "/scoreDetail",
           query: {
-            deptId: _this.departmentId || 0,
-            userId: _this.userId || 0,
+            deptId: (_this.departmentId) || 0,
+            userId: (_this.userId) || 0,
             begDate,
             endDate,
             studyType: (n&&n.studyType)?n.studyType:''

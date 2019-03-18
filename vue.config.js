@@ -5,7 +5,7 @@ const path = require('path')
 function resolve (dir) {
   return path.join(__dirname,dir)
 }
-
+console.log( 'process.env', process.env.NODE_ENV )
 module.exports = {
   outputDir: 'dist',
   baseUrl: process.env.NODE_ENV === 'production' ? './' : './',

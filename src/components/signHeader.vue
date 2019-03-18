@@ -24,8 +24,8 @@
   </div>
 </template>
 <script>
-  import '../css/sign/sign.css';
-
+//  import '../css/sign/sign.css';
+require('../css/sign/sign.css')
   import {goToSignIn} from '../api/sign-api';
   import SignIn from './sign/SignIn.vue';
   import SignInResult from './sign/SignInResult.vue';

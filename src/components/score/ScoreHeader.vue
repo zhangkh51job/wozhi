@@ -34,8 +34,8 @@
         tabss: ['全年', '一季度', '二季度', '三季度', '四季度'],
         currSelectTab: '全年',
 
-        yearColumns:['2017', '2018'],
-        currYear: '2018',
+        yearColumns:['2018', '2019'],
+        currYear: '2019',
 
         currSelectOrgDepartmentId: 0,
 

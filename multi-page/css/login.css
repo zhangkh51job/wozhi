@@ -21,18 +21,19 @@ main{background: url("../image/bg.png") center top no-repeat;height: calc(100% -
 .logo-ct .item .email-icon{background-image: url("../image/email-icon.png")}
 .logo-ct .freshen-ct{margin-top: 15px;}.logo-ct .freshen-ct i{font-style: normal;color: #a5a59e;vertical-align: middle;}
 .logo-ct .reflash-icon{display: inline-block;width: 54px;height: 27px;background-image: url("../image/reflesh-icon.png");margin-left: 8px;cursor: pointer;}
-input[type="text"]::-webkit-input-placeholder{
+input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder{
   color:#d2d2d2;
 }
-input[type="text"]::-moz-placeholder{   /* Mozilla Firefox 19+ */
+input[type="text"]::-moz-placeholder, input[type="password"]::-moz-placeholder{   /* Mozilla Firefox 19+ */
   color:#d2d2d2;
 }
-input[type="text"]:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+input[type="text"]:-moz-placeholder, input[type="password"]:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
   color:#d2d2d2;
 }
-input[type="text"]:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+input[type="text"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder{  /* Internet Explorer 10-11 */
   color:#d2d2d2;
 }
+
 
 
 

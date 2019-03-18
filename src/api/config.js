@@ -8,17 +8,18 @@
 
 
 /*学分系统 测试服务器*/
-/*export const InterfaceUrl = 'http://47.104.239.164:8082/';
- export const StudyPointInterfaceUrl = 'http://xyapi.ipaison.xyz/';
+export const InterfaceUrl = 'http://47.104.239.164:8082/';
+export const StudyPointInterfaceUrl = 'http://xyapi.ipaison.xyz/';
 
- export const androidDownLoadUrl = 'https://www.pgyer.com/AndroidCollegeTest';
- export const iosDownLoadUrl = 'https://www.pgyer.com/iOSCollegeTest';*/
+export const androidDownLoadUrl = 'https://www.pgyer.com/AndroidCollegeTest';
+export const iosDownLoadUrl = 'https://www.pgyer.com/iOSCollegeTest';
 
 /*学分、学点系统 正式服务器*/
+/*
 export const InterfaceUrl = 'http://47.104.239.164:8080/';
-export const StudyPointInterfaceUrl = 'http://xyapi.ipaison.cn/';
+ export const StudyPointInterfaceUrl = 'http://xyapi.ipaison.cn/';
 
-export const androidDownLoadUrl = 'https://www.pgyer.com/AndroidWoZhiCollege';
-export const iosDownLoadUrl = 'https://www.pgyer.com/iOSWoZhiCollege';
+ export const androidDownLoadUrl = 'https://www.pgyer.com/AndroidWoZhiCollege';
+ export const iosDownLoadUrl = 'https://www.pgyer.com/iOSWoZhiCollege';
 
-export const H5deployUrl  = '';
+export const H5deployUrl  = '';*/

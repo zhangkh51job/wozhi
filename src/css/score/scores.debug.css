@@ -561,3 +561,5 @@
 }
 
 .myScore{width: 100% !important;}.orgScore{display: none;}
+.score-index-ct .index-item-ct{padding-bottom: 1.5rem;}
+.score-detail-ct .van-picker__columns .van-picker__frame, .tuandai-ct .van-popup  .van-picker__columns .van-picker__frame{position: absolute !important;}

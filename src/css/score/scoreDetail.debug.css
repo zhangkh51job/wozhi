@@ -265,3 +265,4 @@ input[type="text"]{
   -ms-user-select:text !important;
   user-select: text !important;
 }
+.score-detail-ct .van-picker__columns .van-picker__frame, .tuandai-ct .van-popup  .van-picker__columns .van-picker__frame{position: absolute !important;}
